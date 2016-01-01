@@ -1,0 +1,25 @@
+{
+  "name": "classmate-party",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeachScript/classmate-party.git"
+  },
+  "author": "Peach <scdzwyxst@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeachScript/classmate-party/issues"
+  },
+  "homepage": "https://github.com/PeachScript/classmate-party#readme",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "nodemon": "^1.8.1"
+  }
+}
