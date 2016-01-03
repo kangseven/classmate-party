@@ -2,7 +2,10 @@ var fs = require('fs'),
     path = require('path'),
     Sequelize = require('sequelize'),
     sequelize = new Sequelize('classmate-party', 'Peach', '', {
-      dialect: 'postgres'
+      dialect: 'postgres',
+      define: {
+        timestamps: false
+      }
     }),
     db = {
       Sequelize: Sequelize,

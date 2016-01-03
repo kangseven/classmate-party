@@ -20,6 +20,7 @@
   "dependencies": {
     "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "express-admin": "^1.2.7",
     "nodemon": "^1.8.1",
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",

@@ -1,0 +1,16 @@
+{
+    "pg": {
+        "database": "classmate-party",
+        "user": "Peach",
+        "password": "",
+        "schema": "public"
+    },
+    "server": {
+        "port": 4001
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": true
+    }
+}
