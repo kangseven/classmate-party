@@ -43,7 +43,15 @@
                 "name": "gender",
                 "verbose": "性别",
                 "control": {
-                    "text": true
+                    "select": true,
+                    "options": [
+                        {
+                            "男": "男"
+                        },
+                        {
+                            "女": "女"
+                        }
+                    ]
                 },
                 "type": "varchar(255)",
                 "allowNull": true,
@@ -159,7 +167,7 @@
                 "name": "date",
                 "verbose": "活动时间",
                 "control": {
-                    "text": true
+                    "datetime": true
                 },
                 "type": "timestamp",
                 "allowNull": true,
@@ -207,7 +215,7 @@
                 "name": "description",
                 "verbose": "活动介绍",
                 "control": {
-                    "text": true
+                    "textarea": true
                 },
                 "type": "text",
                 "allowNull": true,
@@ -259,7 +267,7 @@
                 "name": "column",
                 "verbose": "座位列",
                 "control": {
-                    "text": true
+                    "number": true
                 },
                 "type": "integer",
                 "allowNull": true,
