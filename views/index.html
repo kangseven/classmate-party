@@ -8,4 +8,10 @@
   <p>
     <a href="/activities/1">活动详情页</a>
   </p>
+  <h3>活动列表</h3>
+  <ul>
+    <% for(var i = 0;i < activityList.length;i++){ %>
+    <li><%=activityList[i].name %> - 开始时间：<%=dateFormat(activityList[i].date, 'yyyy-MM-dd HH:mm') %></li>
+    <% } %>
+  </ul>
 <% include footer.html %>

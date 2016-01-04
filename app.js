@@ -8,6 +8,8 @@ app.engine('.html', require('ejs').renderFile);
 
 app.use(require('./routes'));
 
+app.use(express.static('public'));
+
 // 将 utils 通过 locals 暴露给模板引擎使用
 (function () {
   for(var i in utils){
