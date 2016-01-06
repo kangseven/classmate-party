@@ -1,17 +1,98 @@
 <% include header.html %>
-  <p>
-    <a href="/login">登录</a>
-  </p>
-  <p>
-    <a href="/activation">激活</a>
-  </p>
-  <p>
-    <a href="/activities/1">活动详情页</a>
-  </p>
-  <h3>活动列表</h3>
-  <ul>
-    <% for(var i = 0;i < activityList.length;i++){ %>
-    <li><%=activityList[i].name %> - 开始时间：<%=dateFormat(activityList[i].date, 'yyyy-MM-dd HH:mm') %></li>
-    <% } %>
-  </ul>
-<% include footer.html %>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+ 	<div class="content">
+		<h2>挥挥手,渴望再见</h2>
+		<h3>高2011级八班聚会活动</h3>
+		<p>[一支穿云箭,千军万马来相见]</p>
+		<p>[时间:2016年2月10日]</p>
+		<p>[地点:万源市中心广场]</p> 
+		<div class="content-btn">
+			<a href="/activities/1">活动详情</a>
+		</div>
+	</div>
+	<div class="recent-acitive">
+		<div class="recent-head cf">
+			<h3>
+				<span class="recent-label"></span>
+				班级活动
+			</h3>
+		</div>
+	</div>
+	<div class="acitive-tags">
+		<div class="inner cf">
+			<h2 class="acitive-title">
+				<a href="/activities/1">挥挥手,渴望再见</a>
+			</h2>
+			<a class="acitive-img" href="/activities/1" title="挥挥手,渴望再见">
+				<img src="images/acitive_tags_img.png" />
+				<i id="shadow"></i>
+				<span class="move-text">阅读详情</span>
+				<em class= "line"></em>
+			</a>
+			<em class= "shadow"></em>
+			<div class="acitive-content">
+				<h2>活动主题</h2>
+				<p>高2011级八班聚会活动</p>
+				<h2>活动时间</h2>
+				<p>2016年2月10日</p>
+				<h2>活动地点</h2>
+				<p>万源市中心广场</p>
+			</div>
+			<div class="acitive-time">
+				<span class="acitive-time-info">2016/1</span>
+				<span class="acitive-time-info">20&nbsp;&nbsp;周三</span>
+				<i></i>
+			</div>
+		</div>
+	</div>
+	<div class="events-list">
+		<div class="recom-events cf">
+			<div class="top-title">
+				<h4>报名详情</h4>
+				<span class= "cloud">The Latest
+				</span>
+			</div>
+			<ul>
+				<li>
+					<p>已报名人数:
+					<span class="num">20</span>
+					人
+					</p>
+				</li>
+				<li>
+					<p>已报名名单:<br/>
+						<span class="name">张三</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三</span>
+						<span class="name">张三</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三额</span>
+						<span class="name">张三</span>	
+					</p>
+				</li>
+			</ul>				
+		</div>
+		<div class="past-events">
+			<div class="top-title">
+				<h4>推荐活动</h4>
+				<span class= "cloud">Top Activity</span>
+			</div>
+			<ul>
+				<li>
+					<a href="/activities/1">挥挥手,渴望再见</a>-
+					<span style="color:red;">new</span>
+				</li>
+				<li>
+					<p>暂无更多</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
