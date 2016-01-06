@@ -1,0 +1,142 @@
+body{
+	margin-bottom: 50px;
+}
+.recent-acitive{
+	overflow: hidden;
+	padding-top: 20px;	
+	width: 960px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.recent-acitive h3{
+	float: left;
+	font-size: 24px;
+	font-weight: normal;
+	color: rgb(45,45,45);
+}
+.recent-acitive h3 .recent-label{
+	border-left: 3px solid rgba(21, 103, 162, 0.85);
+	font-size: 18px;
+	margin-right: 10px;
+}
+.cf:after, .cf:before{
+	clear: both;
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.detail-content{
+	width: 1000px;
+	margin:  0 auto;
+	background: #E7E7E7;
+	margin-top: 25px;
+}
+.detail-wrapper{
+	background: #fff;
+	padding: 25px 20px;
+	margin: 3px;
+	border: 1px solid #ccc;
+}
+.recent-wrapper{
+	margin-bottom: 20px;
+}
+.recent-wrapper img{
+	width: 952px;
+	height: 420px;
+	box-shadow: 0px 3px 8px #5F4F4F;
+}
+.recent-text {
+	overflow: hidden;
+	width: 100%;
+	color: #333;
+}
+.recent-text h3{
+	font-size: 18px;
+		color: #222;
+	font-family: "Microsoft Yahei";
+	padding: 10px 20px 10px 16px;
+	border-left: 4px solid #39c;
+	background: #fbfbfb;
+	font-weight: 400;
+}
+.recent-text p {
+	margin: 8px 2px;
+		text-indent: 2em;
+	line-height: 20px;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+}
+.recent-text strong {
+	color: #454545;
+}
+.recent-text .last-title{
+	color: #B8860B;
+}
+.join-list{
+	width: 992px;
+	margin: 0 auto;
+	background: #fbfbfb;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+}
+.join-list h3{
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	color: rgba(21, 103, 162, 0.7);
+	padding: 25px 0;
+}
+.join-btn{
+	text-align: center;
+	width: 100%;
+}
+.btn{
+	display: inline-block;
+	height: 46px;
+	min-width: 175px;
+	line-height: 46px;
+	background-color: rgb(103, 159, 200);
+	border: solid 1px rgb(103, 159, 200);
+	font-size: 18px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 3px #292A3D;
+	transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	margin-bottom: 20px;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+
+}
+.join-btn .btn:hover{
+	background-color: #1567A2;
+	border: solid 1px #1567A2;
+}
+.join-date{
+	text-align: center;
+	margin-bottom: 15px;
+	color: rgba(113, 100, 87, 0.83);
+}
+
+.footer{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.end-tags a{
+	background: #679fc8;
+	display: inline-block;
+	margin: 10px;
+	border-radius: 3px;
+	padding: 4px 15px;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	box-shadow: 0 2px 2px #333;
+	-moz-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.end-tags a:hover{
+	background: #1567a2;
+	padding-left: 20px;
+}
