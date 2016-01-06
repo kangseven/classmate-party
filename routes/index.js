@@ -2,7 +2,7 @@ var express = require('express'),
     router = express.Router(),
     models = require('../models');
 
-router.use(require('./activation'));
+router.use(require('./password'));
 router.use(require('./login'));
 router.use(require('./detail'));
 
