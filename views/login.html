@@ -4,142 +4,140 @@
   <meta charset="UTF-8">
   <title>班级聚会平台</title>
   <link rel="stylesheet" type="text/css" href="../css/login.css">
-</head>
+</head> 
 <body>
-  <div class="wrapper">
-    <div class="title clearfix">
-      <h1>Classmate party  2016</h1>
-      <h2 class="activate-title">高 2011 级 8 班 座 次 表</h2>
+  <div id="header">
+    <div class="logo">
+      <div class="logo-pic"></div>
+      <h1 class="logo-title">Classmate party 2016</h1>
     </div>
-    <!-- Login page  -->
-    <div class="login clearfix">
-        <div class="header">
-          <div class="switch" id="switch">
-            <a href="#" class=" switch-btn" >快速登录</a>
-            <a href="#" class=" switch-btn2">快速激活</a>
-            <div class="switch-bottom" id="switch-bottom"></div>
+    <div class="nav">
+      <ul>
+        <li><a id="login-btn" href="#">登 录</a></li>
+        <li><a id="activation-btn" href="#">激 活</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Login page  -->
+  <div id="wrapper-login">
+    <h2 class="seating">高 2011 级 <em id="eight">8</em> 班 座 次 表</h2>
+    <div class="login">
+      <div class="section">
+        <form id="form">
+          <div class="form-item">
+            <h2>快速登录</h2>
           </div>
-        </div>
-        <div class="web-box-login " id="webBoxLogin">
-          <div class="web-login" id="web-login">
-            <div class="login-form">
-              <form action="#">
-                <div class="user">
-                  <label for="user" class="input-tips">账号:</label>
-                  <div class="input-box">
-                    <input type="text" id="user" name="username" class="inputstyle bor">
-                  </div>
-                </div>
-                <div class="login-password">
-                  <label for="password" class="input-tips">密码:</label>
-                  <div class="input-box">
-                    <input type="password" id="password" name='password' class="inputstyle bor">
-                  </div>
-                </div>
-                <div class="remember">
-                  <label for="remember" class="input-remember">记住我 (网吧或别人电脑请不要勾选)</label>
-                  <input type="checkbox" id="remember" class="input-checkbox">
-                </div>
-                <div class="login-button">
-                  <a class="button-blue" href="/">登 录</a>
-                </div>
-                <div class="forget-key">
-                  <a href="#">忘记密码?</a>
-                </div>
-              </form> 
+          <div class="form-item">
+            <input type="text" class="form-input" name="name" placeholder="手机号码/邮箱">
+            <div class="bot-bar"></div>                  
+          </div>
+          <div class="form-item">
+            <input type="password" class="form-input" name="password" placeholder="密码">
+            <div class="bot-bar"></div>                  
+          </div>
+          <div class="form-item clearfix">
+            <div class="remember">
+              <input class="input-checkbox" type="checkbox" id="remember">
+              <label class="input-remember" for="remember">记住我</label>
+              <div class="forget-key">
+                <a href="#">忘记密码?</a>
+              </div>
             </div>
           </div>
-        </div>
-    </div>
-    <!-- Quick login btn -->
-    <div class="interface-btn clearfix">
-      <a href="javascript:;">快速登录</a>
-    </div>
-    <!-- Activate page -->
-    <div class="activate clearfix">
-      <div class="activate-wrapper clearfix">
-        <div class="activate-list">
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三</p>
-        </div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-          <p>张三</p>
-        </div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-aisle"></div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-list">
-          <p class="nostyle"></p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-list">
-          <p class="nostyle"></p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-aisle"></div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-        </div>
-        <div class="activate-list">
-          <p>张三疯</p>
-          <p>张三疯</p>
-          <p>张三</p>
-          <p>张三</p>
-          <p>张三疯</p>
-        </div>
+          <div class="form-item">
+            <div class="form-submit" data-txt="登录"><a href="/">登录</a></div>
+          </div>
+          <p class="prompt"></p>
+        </form>
       </div>
+    </div>
+  </div>
+   <!-- Activate page -->
+  <div class="activate clearfix">
+    <div class="activate-wrapper clearfix">
+      <div class="activate-list">
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三</p>
+      </div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+        <p>张三</p>
+      </div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-aisle"></div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-list">
+        <p class="nostyle"></p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-list">
+        <p class="nostyle"></p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-aisle"></div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+      </div>
+      <div class="activate-list">
+        <p>张三疯</p>
+        <p>张三疯</p>
+        <p>张三</p>
+        <p>张三</p>
+        <p>张三疯</p>
+      </div>
+    </div>
+    <div class="middle clearfix">
       <div class="ozone">
         <img src="../images/ozone-dither.gif">
       </div>
@@ -150,32 +148,39 @@
         <span class="dais">讲&nbsp &nbsp台</span>
       </div>
     </div>
-    <!-- Registration page -->
-    <div class="registration-page clearfix" id="registration-page">
-      <div class="registration-wrapper">
-        <div class="input-box2">
-          <input class="inputstyle2 bor" type="text" name="name" maxlength="16" placeholder="真实姓名"/>
-          <span></span>
-        </div>
-        <div class="input-box2">
-          <input class="inputstyle2 bor" type="text" name="email" maxlength="16" placeholder="手机/邮箱"/>
-          <span></span>
-        </div>
-        <div class="input-box2">
-          <input class="inputstyle2 bor" type="password" name="password" maxlength="16" placeholder="密码"/>
-          <span></span>
-        </div>
-        <div class="input-box2">
-          <input class="inputstyle2 bor" type="password" name="password" maxlength="16" placeholder="确认密码"/>
-          <span></span>
-        </div>
+  </div>
+  <!-- register page -->
+  <div class="register">
+    <div class="login">
+      <div class="section">
+        <form id="form">
+          <div class="form-item">
+            <h2>激活账号</h2>
+          </div>
+          <div class="form-item">
+            <input type="text" class="form-input" name="name" placeholder="真实姓名">
+            <div class="bot-bar"></div>                  
+          </div>
+          <div class="form-item">
+            <input type="text" class="form-input" name="name" placeholder="手机号码/邮箱">
+            <div class="bot-bar"></div>                  
+          </div>
+          <div class="form-item">
+            <input type="password" class="form-input" name="password" placeholder="密码">
+            <div class="bot-bar"></div>                  
+          </div>
+          <div class="form-item">
+            <input type="password" class="form-input" name="password" placeholder="确认密码">
+            <div class="bot-bar"></div>                  
+          </div>
+          <div class="form-item">
+            <div class="register-form-submit" data-txt="激 活"><a href="#">激 活</a>  </div>
+          </div>
+          <p class="register-prompt"></p>
+        </form>
       </div>
-      <div class="register-btn">
-       <a href="#">确认注册</a>
-      </div>
-      <div class="close-btn"></div>
     </div>
   </div>
-  <script type="text/javascript" src='../js/login.js'></script>
+  <script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>

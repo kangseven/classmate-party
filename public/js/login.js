@@ -117,35 +117,28 @@ function startMove(element, json,ratio,func) {
   }, 30);
 }
 function func() {
- startMove($('.activate-title')[0],{top:40},20);
+ startMove($('.seating')[0],{top:-30},300);
 }
-$('.switch-btn')[1].onclick = function() {
-  startMove($('.login')[0],{left:390},2);
-  startMove($('.interface-btn')[0],{right:-395},50);
-  startMove($('h1')[0],{right:-425},2);
-  startMove($('.activate-title')[0],{top:65},30,func);
-  startMove($('.activate')[1],{top:-17,left:0},5);
+function eight() {
+ startMove($('#eight'),{top:145},20000);
+}
+$('#login-btn').onclick = function() {
+  startMove($('.seating')[0],{top:-30},1);
+  startMove($('.activate')[0],{top:0},1);
+  startMove($('.login')[0],{left:0},7);
+  startMove($('.register')[0],{top:0},1);
+  startMove($('#eight'),{top:-100},1);
 
 }
-$('.interface-btn')[0].onclick = function() {
-  startMove($('.login')[0],{left:-30},5);
-  startMove($('.interface-btn')[0],{right:-430},1);
-  startMove($('h1')[0],{right:0},5);
-  startMove($('.activate-title')[0],{top:-80},1);
-  startMove($('.activate')[1],{top:600,left:-155},1);
-  startMove($('#registration-page'),{top:116,left:1000},2);
-
+$('#activation-btn').onclick = function() {
+  startMove($('.seating')[0],{top:45},100,func);
+  startMove($('#eight'),{top:50},100,eight);
+  startMove($('.activate')[0],{top:-548},8);
+  startMove($('.login')[0],{left:400},3);
+  startMove($('.register')[0],{top:0},1);
 }
 for (var i = 0; i < $('p').length; i++) {
   $('p')[i].onclick= function() {
-    startMove($('#registration-page'),{top:-500,left:440},5);
-    startMove($('.activate')[1],{top:600,left:-155},1);
+    startMove($('.register')[0],{top:-540},5);
   }
 }
-$('.close-btn')[0].onclick = function() {
-  startMove($('#registration-page'),{top:116,left:1000},1);
-  startMove($('.activate')[1],{top:-17,left:0},5);
-}
-
-
-
