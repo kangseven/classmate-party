@@ -1,7 +1,7 @@
 var express = require('express'),
     router = express.Router();
 
-router.get('/activities/:id', function (req, res) {
+router.get('/activities/:id', require('../helpers/auth_check'), function (req, res) {
   res.render('detail.html');
 });
 

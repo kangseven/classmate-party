@@ -2,13 +2,24 @@ var express = require('express'),
     app = express(),
     nodemon = require('nodemon')
     models = require("./models"),
-    utils = require('./helpers/utils');
+    utils = require('./helpers/utils'),
+    passport = require('./helpers/passport');
 
 app.engine('.html', require('ejs').renderFile);
 
-app.use(require('./routes'));
-
 app.use(express.static('public'));
+app.use(require('body-parser').urlencoded({ extended: true }));
+app.use(require('cookie-parser')());
+app.use(require('express-session')({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(require('connect-flash')());
+
+app.use(require('./routes'));
 
 // 将 utils 通过 locals 暴露给模板引擎使用
 (function () {
