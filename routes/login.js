@@ -3,7 +3,38 @@ var express = require('express'),
     models = require('../models');
 
 router.get('/login', function (req, res) {
-  res.render('login.html', { message: req.flash('error') });
+  models.Seat.findAll({
+    order: 'id ASC',
+    include: [
+      {
+        model: models.User
+      }
+    ]
+  }).then(function (seats) {
+    var seatResults = {},
+        results = [];
+
+    for(var i = 0;i < seats.length;i++){
+      var column = seats[i].get('column');
+      if(!seatResults[column]){
+        seatResults[column] = [];
+      }
+
+      seatResults[column].push({
+        name: seats[i].get('User').get('name'),
+        gender: seats[i].get('User').get('gender')
+      });
+    }
+
+    for(i in seatResults){
+      results.push({
+        column: i,
+        members: seatResults[i]
+      });
+    }
+
+    res.render('login.html', { message: req.flash('error'), seats: results });
+  });
 });
 
 router.post('/login',
