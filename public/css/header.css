@@ -6,6 +6,7 @@ h1,h2,p,h3,h4,body,ul,div,li,input {
 }
 ul {list-style: none;}
 a {
+  color: #333;
   text-decoration: none;
   transition: all ease-in-out .4s;
   -moz-transition: all ease-in-out .4s;
@@ -21,18 +22,18 @@ input {outline: none;}
 }
 body {
   font:13px/22px Helvetica, Verdana, '微软雅黑', 'Microsoft YaHei', Arial;
-  background: #ece9e5 url(../images/bg_top.gif) repeat;
+  background: #ece9e5 url(/images/page_bg_pic.gif) repeat;
 }
 #header {
   overflow: hidden;
-  background: #649cc7 url(../images/bg_nav2.gif) repeat-x;
+  background: #649cc7 url(/images/header_nav.gif) repeat-x;
   box-shadow: 0px 3px 4px #000;
   margin-bottom: 2px;
 }
 #header .logo {float: left;}
 .logo .logo-pic {
   float: left;
-  background: url(../images/img_ribbon.gif) no-repeat 15px -8px;
+  background: url(/images/header_ribbon.gif) no-repeat 15px -8px;
   padding: 17px 0 0 52px;
   height: 33px;
 }
@@ -40,10 +41,14 @@ body {
   float: left;
   height: 53px;
   line-height: 53px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.98);
   font-size: 33px;
   padding-left: 15px;
-  text-shadow: 3px 3px 0 #083D67,4px 4px 0 rgba(21, 103, 162, 0.85);
+  text-shadow: 0px -1px 2px #000;
+}
+.logo a {
+  display: inline-block;
+  overflow: hidden;
 }
 #header .nav {
   float: right;
@@ -55,11 +60,17 @@ body {
   height: 28px;
   line-height: 28px;
   color: #fff;
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   padding: 0 12px;
   margin: 16px 8px;
   border-radius: 5px;
-  box-shadow: 5px 3px 5px rgba(19, 17, 17, 0.5);
+  box-shadow: 4px 3px 5px rgba(16, 60, 93, 0.6);
 }
-.nav a:hover {box-shadow: -5px 3px 5px rgba(19, 17, 17, 0.5);}
+.nav a:hover {box-shadow: 2px 3px 5px rgba(13, 37, 56, 0.8);}
+.cf:after, .cf:before {
+  clear: both;
+  display: table;
+  content: "";
+  line-height: 0;
+}
