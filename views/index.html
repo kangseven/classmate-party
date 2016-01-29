@@ -1,17 +1,75 @@
 <% include header.html %>
-  <p>
-    <a href="/login">登录</a>
-  </p>
-  <p>
-    <a href="/activation">激活</a>
-  </p>
-  <p>
-    <a href="/activities/1">活动详情页</a>
-  </p>
-  <h3>活动列表</h3>
-  <ul>
-    <% for(var i = 0;i < activityList.length;i++){ %>
-    <li><%=activityList[i].name %> - 开始时间：<%=dateFormat(activityList[i].date, 'yyyy-MM-dd HH:mm') %></li>
-    <% } %>
-  </ul>
-<% include footer.html %>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+ 	<div class="main-news">
+		<h2>挥挥手,不说再见</h2>
+		<h3>高2011级八班聚会活动</h3>
+		<p>[一支穿云箭,千军万马来相见]</p>
+		<p>[时间:2016年2月12日]</p>
+		<p>[地点:万源市中心广场]</p> 
+		<div class="main-news-btn">
+			<a href="/activities/1">活动详情</a>
+		</div>
+	</div>
+	<div class="main-content cf">
+		<div class="recent-acitive">
+			<h3>
+				<span class="recent-label"></span>
+				班级活动
+			</h3>
+		</div>
+		<div class="acitive-tags">
+			<div class="inner cf">
+				<h3 class="acitive-title">
+					<a href="/activities/1">挥挥手,不说再见</a>
+				</h3>
+				<a class="acitive-img" href="/activities/1" title="挥挥手,渴望再见">
+					<img src="images/index_activity_pic.png" />
+					<i id="shadow"></i>
+					<span class="move-text">阅读详情</span>
+					<em class= "line"></em>
+				</a>
+				<em class= "shadow"></em>
+				<div class="acitive-content">
+					<h4>活动主题</h4>
+					<p>高2011级八班聚会活动</p>
+					<h4>活动时间</h4>
+					<p>2016年2月12日</p>
+					<h4>活动地点</h4>
+					<p>万源市中心广场</p>
+				</div>
+				<div class="acitive-time">
+					<p>
+						<span class="acitive-time-info">2016/1/30</span>
+						<span class="acitive-time-info">周六</span>
+					</p>
+					<i></i>
+				</div>
+			</div>
+		</div>
+		<div class="events-list">
+			<div class="recom-events">
+				<div class="top-title">
+					<h4>推荐活动</h4>
+					<span class= "cloud">Top Activity</span>
+				</div>
+				<ul>
+					<li>
+						<a href="/activities/1">挥挥手,不说再见</a>-
+						<span style="color:red;">new</span>
+					</li>
+				</ul>				
+			</div>
+			<div class="past-events">
+				<div class="top-title">
+					<h4>往期活动</h4>
+					<span class= "cloud">Past Events</span>
+				</div>
+				<p class="no-data"><i>暂无数据</i></p>
+			</div>
+		</div>
+	</div>
+	<div id="box-msg"></div>
+	<div id="box-bg"></div>
+	<script type="text/javascript" src="/js/public.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+
