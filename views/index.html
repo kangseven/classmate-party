@@ -1,13 +1,14 @@
 <% include header.html %>
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
  	<div class="main-news">
+    <% var activity = activityList[0] %>
 		<h2>挥挥手,不说再见</h2>
-		<h3>高2011级八班聚会活动</h3>
+		<h3><%=activity.name %></h3>
 		<p>[一支穿云箭,千军万马来相见]</p>
-		<p>[时间:2016年2月12日]</p>
-		<p>[地点:万源市中心广场]</p> 
+		<p>[时间: <%=dateFormat(activity.date, 'yyyy年MM月dd日') %>]</p>
+		<p>[地点: <%=activity.location %>]</p>
 		<div class="main-news-btn">
-			<a href="/activities/1">活动详情</a>
+			<a href="/activities/<%=activity.id %>">活动详情</a>
 		</div>
 	</div>
 	<div class="main-content cf">
@@ -17,12 +18,13 @@
 				班级活动
 			</h3>
 		</div>
+    <% for(var i = 0;i < activityList.length;i++){ %>
 		<div class="acitive-tags">
 			<div class="inner cf">
 				<h3 class="acitive-title">
-					<a href="/activities/1">挥挥手,不说再见</a>
+					<a href="/activities/<%=activityList[i].id %>"><%=activityList[i].name %></a>
 				</h3>
-				<a class="acitive-img" href="/activities/1" title="挥挥手,渴望再见">
+				<a class="acitive-img" href="/activities/<%=activityList[i].id %>" title="<%=activityList[i].name %>">
 					<img src="images/index_activity_pic.png" />
 					<i id="shadow"></i>
 					<span class="move-text">阅读详情</span>
@@ -31,21 +33,22 @@
 				<em class= "shadow"></em>
 				<div class="acitive-content">
 					<h4>活动主题</h4>
-					<p>高2011级八班聚会活动</p>
+					<p><%=activityList[i].name %></p>
 					<h4>活动时间</h4>
-					<p>2016年2月12日</p>
+					<p><%=dateFormat(activity.date, 'yyyy年MM月dd日') %></p>
 					<h4>活动地点</h4>
-					<p>万源市中心广场</p>
+					<p><%=activityList[i].location %></p>
 				</div>
 				<div class="acitive-time">
 					<p>
-						<span class="acitive-time-info">2016/1/30</span>
-						<span class="acitive-time-info">周六</span>
+						<span class="acitive-time-info"><%=dateFormat(activity.date, 'yyyy/MM/dd') %></span>
+						<span class="acitive-time-info"><!-- 周六 --></span>
 					</p>
 					<i></i>
 				</div>
 			</div>
 		</div>
+    <% } %>
 		<div class="events-list">
 			<div class="recom-events">
 				<div class="top-title">
@@ -53,11 +56,13 @@
 					<span class= "cloud">Top Activity</span>
 				</div>
 				<ul>
+          <% for(i = 0;i < activityList.length;i++){ %>
 					<li>
-						<a href="/activities/1">挥挥手,不说再见</a>-
+						<a href="/activities/<%=activity.id %>"><%=activity.name %></a>-
 						<span style="color:red;">new</span>
 					</li>
-				</ul>				
+          <% } %>
+				</ul>
 			</div>
 			<div class="past-events">
 				<div class="top-title">

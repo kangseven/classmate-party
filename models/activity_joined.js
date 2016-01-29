@@ -1,11 +1,19 @@
 module.exports = function (sequelize, DataTypes) {
-  var joined = sequelize.define('ActivityJoined', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+  var Joined = sequelize.define('ActivityJoined', {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+      }
+    },
+    {
+      classMethods: {
+        associate: function (models) {
+          Joined.belongsTo(models.User);
+        }
+      }
     }
-  });
+  );
 
-  return joined;
+  return Joined;
 };

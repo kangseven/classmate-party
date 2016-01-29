@@ -15,10 +15,3 @@ $('#buttons-cancel').onclick = function() {
   $('#join-msg').style.display ='none';
   startMove($('#join-msg'),{left:-1000},2);
 }
-$('#buttons-determine').onclick = function() {
-  $('#join-msg').style.display ='none';
-  startMove($('#join-msg'),{left:-1000},2);
-  $('#box-msg').innerHTML = '恭喜你报名成功';
-  $('.join-title')[0].innerHTML = '恭喜你报名成功';
-  boxMsg();
-}

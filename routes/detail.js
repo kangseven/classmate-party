@@ -3,7 +3,40 @@ var express = require('express'),
     models = require('../models');
 
 router.get('/activities/:id(\\d+)', require('../helpers/auth_check'), function (req, res) {
-  res.render('detail.html', { message: req.flash('info') });
+  models.Activity.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function (activity) {
+    if(activity){
+      models.ActivityJoined.findAll({
+        where: {
+          ActivityId: req.params.id
+        },
+        include: [
+          {
+            model: models.User
+          }
+        ]
+      }).then(function (list) {
+        var isJoined = false;
+        for(var i = 0;i < list.length;i++){
+          if(list[i].get('User').get('id') == req.user.id){
+            isJoined = true;
+            break;
+          }
+        }
+        res.render('detail.html', {
+          message: req.flash('info'),
+          activity: activity,
+          participants: list,
+          isJoined: isJoined
+        });
+      });
+    }else{
+      res.redirect('/');
+    }
+  })
 });
 
 router.post('/activities/:id(\\d+)', require('../helpers/auth_check'), function (req, res) {

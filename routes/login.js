@@ -15,13 +15,15 @@ router.get('/login', function (req, res) {
         results = [];
 
     for(var i = 0;i < seats.length;i++){
-      var column = seats[i].get('column');
+      var column = seats[i].get('column'),
+          name = seats[i].get('User').get('name');
       if(!seatResults[column]){
         seatResults[column] = [];
       }
 
       seatResults[column].push({
-        name: seats[i].get('User').get('name'),
+        id: seats[i].get('User').get('id'),
+        name: name.length == 3?'？？' + name[2]: '？' + name[1],
         gender: seats[i].get('User').get('gender')
       });
     }
@@ -33,7 +35,17 @@ router.get('/login', function (req, res) {
       });
     }
 
-    res.render('login.html', { message: req.flash('error'), seats: results });
+    results.splice(3, 0, { aisle: true });
+    results.splice(8, 0, { aisle: true });
+    results[5].platform = true;
+    results[6].platform = true;
+
+    res.render('login.html', {
+      message: req.flash('error'),
+      seats: results,
+      actMessage: req.flash('act_error'),
+      globalMessage: req.flash('info')
+    });
   });
 });
 
@@ -61,7 +73,10 @@ router.post('/activation', function (req, res) {
     }).then(function (user) {
       if(user){
         if(user.get('password')){
-          req.flash('info', '该账号已激活，不可重复激活！');
+          req.flash('info', '该账号已激活！');
+          res.redirect('/login');
+        }else if(!data.mobile || !data.email || !data.password){
+          req.flash('act_error', '请将信息填写完整后再尝试激活！');
           res.redirect('/login');
         }else if(user.get('name') == data.name){
           models.User.update({

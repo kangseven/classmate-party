@@ -1,5 +1,5 @@
-::selection {background:#B8860B; color:#fff;} 
-::-moz-selection {background:#B8860B; color:#fff;} 
+::selection {background:#B8860B; color:#fff;}
+::-moz-selection {background:#B8860B; color:#fff;}
 h1,h2,p,h3,h4,body,ul,div,li,input {
   margin: 0;
   padding: 0;
@@ -180,11 +180,15 @@ body {
   -o-transition: all ease-in-out .25s;
   -webkit-transition: all ease-in-out .25s;
 }
-.form-submit a,.register-form-submit a {
+.form-submit button,.register-form-submit button {
   display: inline-block;
   width: 100%;
   height: 26px;
   color: #fff;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 .form-submit:hover,.register-form-submit:hover {background-color: #1b76c5;}
 .prompt,.register-prompt {

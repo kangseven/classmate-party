@@ -23,9 +23,10 @@ window.onload = function() {
     startMove($('#register'),{top:0},1);
   }
   for (var i = 0; i < $('p').length; i++) {
-    $('p')[i].onclick= function() {
+    $('p')[i].onclick = function() {
       $('#register').style.display ='block';
       startMove($('#register'),{top:-560},5);
+      document.getElementById('user-id').value = this.getAttribute('data-id');
     }
   }
 }
