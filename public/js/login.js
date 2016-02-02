@@ -1,31 +1,33 @@
 window.onload = function() {
-  function func() {
-   startMove($('.seating')[0],{top:64},70);
-  }
   $('#login-btn').onclick = function() {
-    $('.activate')[0].style.display ='none';
-    $('#register').style.display ='none';
-    $('.seating')[0].style.display ='none';
-    startMove($('.seating')[0],{top:-30},1);
+    addClass($('.login')[0],'enter-left-bounce');
+    removeClass($('.activate')[0],'enter-up-bounce');
+    removeClass($('#class-name'),'journal');
+    removeClass($('.register')[0],'enter-up-bounce');
     startMove($('.activate')[0],{top:0},1);
     startMove($('.login')[0],{left:0},7);
-    startMove($('#register'),{top:0},1);
-    startMove($('#class-name'),{top:-100},1);
+    startMove($('.register')[0],{top:0},1);
+    for (var j = 0; j < $('p').length; j++) {
+      $('p')[j].style.backgroundColor = 'rgba(25, 122, 154, 0.85)';
+    }
   }
   $('#activation-btn').onclick = function() {
-    $('.seating')[0].style.display ='block';
-    $('.activate')[0].style.display ='block';
-    $('#register').style.display ='none';
-    startMove($('.seating')[0],{top:-5},40,func);
-    startMove($('#class-name'),{top:0},65);
-    startMove($('.activate')[0],{top:-598},8);
+    addClass($('.activate')[0],'enter-up-bounce');
+    addClass($('#class-name'),'journal')
+    removeClass($('.register')[0],'enter-up-bounce');
+    removeClass($('.login')[0],'enter-left-bounce');
+    startMove($('.activate')[0],{top:-578},8);
     startMove($('.login')[0],{left:400},3);
-    startMove($('#register'),{top:0},1);
+    startMove($('.register')[0],{top:0},1);
   }
   for (var i = 0; i < $('p').length; i++) {
     $('p')[i].onclick = function() {
-      $('#register').style.display ='block';
-      startMove($('#register'),{top:-560},5);
+      for (var j = 0; j < $('p').length; j++) {
+       $('p')[j].style.backgroundColor = 'rgba(25, 122, 154, 0.85)';
+      }
+      this.style.backgroundColor = '#DAA520';
+      addClass($('.register')[0],'enter-up-bounce');
+      startMove($('.register')[0],{top:-560},5);
       document.getElementById('user-id').value = this.getAttribute('data-id');
     }
   }

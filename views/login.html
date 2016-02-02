@@ -21,7 +21,6 @@
   </div>
   <!-- Login page  -->
   <div id="wrapper-login">
-    <h2 class="seating">高 2011 级 <em id="class-name">8</em> 班 座 次 表</h2>
     <div class="login">
       <div class="section">
         <form action="" method="POST" id="form">
@@ -73,15 +72,15 @@
         <% } %>
       </div>
       <div class="notes">
-        <h4>激活提示</h4>
+        <h4>激活步骤</h4>
         <ol>
-          <li>"<strong>*</strong>"在后面的为某次考试各位同学的座位分布图。</li>
-          <li>"<strong>*</strong>"在前面的为艺考生或不在座位图名单中的同学。</li>
-          <li>根据群共享里面的座次表与激活页面的座位图进行比对,找出你所在位置点击进行激活。</li>
+          <li><strong>#</strong>点击座位号 <strong>#</strong>输入你的真实姓名及相关资料 <strong>#</strong>确认激活</li>
+          <li><strong>#</strong>不清楚座位号请参考群共享班级座次表文件 <strong>#</strong>最后一排为艺考生或不在座次表的同学名单</li>
         </ol>
       </div>
     </div>
     <div class="middle clearfix">
+      <div id="class-name"><i>8</i></div>
       <div class="ozone">
         <img src="/images/earth_ozone_dither.gif">
       </div>
@@ -94,7 +93,7 @@
     </div>
   </div>
   <!-- register page -->
-  <div id="register">
+  <div class="register">
     <div class="login">
       <div class="section">
         <form action="/activation" id="form" method="POST">
@@ -141,7 +140,7 @@
   <div id="box-msg"><%=globalMessage %></div>
   <div id="box-bg"></div>
   <% } %>
-  <script type="text/javascript" src="/js/login.js"></script>
   <script type="text/javascript" src="/js/public.js"></script>
+  <script type="text/javascript" src="/js/login.js"></script>
 </body>
 </html>

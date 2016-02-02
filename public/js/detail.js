@@ -10,6 +10,7 @@
 $('#btn').onclick = function() {
   $('#join-msg').style.display ='block';
   startMove($('#join-msg'),{left:300},5);
+  addClass($('#join-msg'),'journal');
   }
 $('#buttons-cancel').onclick = function() {
   $('#join-msg').style.display ='none';

@@ -117,7 +117,30 @@ function startMove(element, json,ratio,func) {
       }
     }
   }, 30);
-}
+} 
+  /*hasClass*/
+function hasClass(obj, cls) {  
+    return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));  
+}  
+/*addClass*/ 
+function addClass(obj, cls) {  
+  if (!hasClass(obj, cls)) obj.className += " " + cls;  
+}  
+/*removeClass*/  
+function removeClass(obj, cls) {  
+    if (hasClass(obj, cls)) {  
+        var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');  
+        obj.className = obj.className.replace(reg, ' ');  
+    }  
+}  
+/*toggleClass*/  
+function toggleClass(obj,cls) {  
+    if(hasClass(obj,cls)){  
+        removeClass(obj, cls);  
+    }else{  
+        addClass(obj, cls);  
+    }  
+} 
 /*全局提示框*/
 function boxMsg() {
   if($('#box-msg').innerHTML) {
